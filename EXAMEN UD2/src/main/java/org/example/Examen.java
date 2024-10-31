@@ -12,6 +12,7 @@ public class Examen {
         int puntjug=0;
         int puntcom=0;
         int ronda=0;
+        boolean desempate=false;
         while (puntcom<3&&puntjug<3&&ronda!=3){
             ronda++;
             /*Eleccion de la maquina*/
@@ -22,7 +23,10 @@ public class Examen {
                 case 2:com="a";break;
                 case 3:com="t";break;
             }
-            System.out.println("Ronda "+ronda);
+            if (!desempate){
+                System.out.println("Ronda "+ronda);
+            }
+
 
             /*Eleccion del jugador*/
             System.out.println("¿Piedra, papel o tijera? (p/a/t)");
@@ -84,6 +88,8 @@ public class Examen {
             System.out.println("Marcador actual (PC-usuario): "+puntcom+"-"+puntjug);
             if (ronda==3&&puntjug==puntcom){
                 ronda--;
+                System.out.println("Ronda de Desempate");
+                desempate=true;
             }
         }
         System.out.println(" ");
