@@ -29,6 +29,7 @@ public class Examen {
             System.out.println("¿Piedra, papel o tijera? (p/a/t)");
             String jug=entrada.next();
             jug=jug.toLowerCase();
+            jug=jug.trim();
 
             /*Comprobando resultado*/
             if (jug.equals("p")||jug.equals("a")||jug.equals("t")){
@@ -86,6 +87,7 @@ public class Examen {
                 ronda--;
             }
         }
+        System.out.println(" ");
         if (puntjug>puntcom){
             System.out.println("¡GANA EL USUARIO!");
         }else {
