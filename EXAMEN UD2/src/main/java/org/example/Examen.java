@@ -2,7 +2,6 @@ package org.example;
 
 import java.time.LocalDateTime;
 import java.util.InputMismatchException;
-import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
